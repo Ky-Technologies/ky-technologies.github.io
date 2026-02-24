@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JS -->
+    <script defer src="./Js/sesion.js"></script>  
+    <!-- CSS -->
+    <link rel="stylesheet" href="./Style/style.css">
+    <!-- FONTS Y FAVICON-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Assets/icons/android.png">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="bi bi-arrow-left"></i>
+        </div>
+        <div class="menuPrincipal">
+            <img src="./assets/icons/apple.png" alt="icono apple">
+            <ul class="menuPrincipalLista">
+                <li class="selected"><a href="./index.html">inicio</a></li>
+                <li><a href="./Pages/catalogo.html">catalogo</a></li>
+                <li><a href="./Pages/nosotros.html">nosotros</a></li>
+                <li><a href="./Pages/contacto.html">contacto</a></li>
+            </ul>
+            <img src="./assets/icons/android.png" alt="icono celular">
+        </div>
+        <div class="menuHidden"> 
+            <input type="checkbox" class="toggle"> 
+            <label for="toggle"><img class="hamburguesa" src="./assets/icons/menu1.png" alt="icono de menu desplegable"></label> 
+            <nav class="menu">
+                <ul>   
+                    <li><a class="activo" href="./index.html">inicio</a></li>
+                    <li><a href="./Pages/catalogo.html">catalogo</a></li>
+                    <li><a href="./Pages/nosotros.html">nosotros</a></li>
+                    <li><a href="./Pages/contacto.html">contacto</a></li>
+                </ul>
+            </nav>     
+        </div>    
+        <div class="log">
+            <img src="./assets/icons/sesion.png" alt="icono de inicio de sesión">
+            <div class="logIn">
+                <button class="botonLog"><a id="botonCambiar" href="./Pages/registro.html">Iniciar sesión</a></button>
+            </div>
+            <div class="logOut"></div>
+        </div>
+    </header>
+    <main>
+        <div class="cabecera">
+            <section class="titulo">
+                <h1 id="titulo">Capitan Phone</h1>
+                <p>Más que un Store</p>
+            </section>    
+        </div>
+        <section class="marca">
+            <div class="modelo">
+                <a href="./Pages/catalogo.html">
+                    <img src="./assets/images/iphone.png" alt="imagen de Iphone 11">
+                    <p>Iphone</p>
+                </a>
+            </div>
+            <div class="modelo">
+                <a href="./Pages/catalogo.html">
+                    <img src="./assets/images/Xiaomi.png" alt="Imagen de Xiaomi NOTE 13">
+                    <p>Xiaomi</p>
+                </a>
+            </div>
+            <div class="modelo">
+                <a href="./Pages/catalogo.html">
+                    <img src="./assets/images/Motorola.png" alt="Imagen de Motorola G84">
+                    <p>Motorola</p>
+                </a>        
+            </div>
+            <div class="modelo">
+                <a href="./Pages/catalogo.html">
+                    <img src="./assets/images/samsung.jpg" alt="Imagen de Samsung A15">
+                    <p>Samsung</p>
+                </a>
+            </div>
+        </section>
+        <section class="seccion">
+            <h2>Productos de alta calidad.</h2>
+            <p>Atención personalizada</p>
+        </section>
+        <section id="publicidad">
+            <a href="./Pages/Catalogo.html" id="uno" target="_blank"><img src="./assets/images/publicidad1.jpg" alt="imagen de telefonos Iphone"></a>
+            <a href="./Pages/Catalogo.html" id="dos" target="_blank"><img src="./assets/images/publicidad2.jpg" alt="imagen de telefonos Iphone"></a>
+        </section>
+        <section class="seccion">
+        <h2>Una empresa en crecimiento.</h2>
+        <p>Tecnología de última generación.</p>
+        </section>
+        <section id="botones">
+            <div class="botones">
+                <a href="">
+                    <img src="./assets/icons/camion.png" alt="icono de un camion">
+                    <h3>Envios en Zona Norte.</h3>
+                    <p>En menos de 24 hs tenes tu equipo.</p>
+                </a>
+            </div>
+            <div class="botones">
+                <a href="">
+                    <img src="./assets/icons/auriculares.png" alt="icono de atencion al cliente">
+                    <h3>Atención al cliente.</h3>
+                    <p id="auriculares">Queres saber mas? Escribinos.</p>
+                </a>
+            </div>
+            <div class="botones">
+                <a href="">
+                    <img src="./assets/icons/caja-de-regalo.png" alt="icono de regalo">
+                    <h3>Solución para esos dias.</h3>
+                    <p id="regalo">Un regalo que te conecta.</p>
+                </a>
+            </div>
+            <div class="botones">
+                <a href="">
+                    <img src="./assets/icons/comprar.png" alt="icono de una tarjeta de crédito">
+                    <h3>Paga con todos los medios.</h3>
+                    <p id="tarjeta">La elección es tuya.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="redes">
+                <a href="https://www.facebook.com">
+                    <img src="./assets/icons/facebook.png" alt="icono de Facebook">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="./assets/icons/instagram.png" alt="icono de Instagram">
+                </a>
+                <a href="https://x.com">
+                    <img src="./assets/icons/twitter.png" alt="icono de Twitter">
+                </a>
+                <a href="https://mail.google.com">
+                    <img src="./assets/icons/gmail.png" alt="icono de Gmail">
+                </a>
+            </div>
+            <div class="item1">
+                <h4>Compañia</h4>
+                <a href="./Pages/nosotros.html" target="_blank"><h5>Sobre Nosotros</h5></a>
+                <a href="./Pages/nosotros.html" target="_blank"><h5>Servicios</h5></a>
+                <a href="./Pages/construccion.html" target="_blank"><h5>Política de Privacidad</h5></a>
+                <a href="./Pages/construccion.html" target="_blank"><h5>Política de Cookies</h5></a>
+            </div>
+            <div class="item2">
+                <h4>Ayuda</h4>
+                <a href="./Pages/construccion.html" target="_blank"><h5>FAQ</h5></a>
+                <a href="./Pages/construccion.html" target="_blank"><h5>Envios</h5></a>
+                <a href="./Pages/construccion.html" target="_blank"><h5>Devoluciones</h5></a>
+                <a href="./Pages/construccion.html" target="_blank"><h5>Formas de pago</h5></a>
+            </div>
+            <div class="item3">
+                <h4>Shop</h4>
+                <a href="./Pages/catalogo.html" target="_blank"><h5>Telefonos</h5></a>
+                <a href="./Pages/catalogo.html" target="_blank"><h5>Accesorios</h5></a>
+                <a href="./Pages/catalogo.html" target="_blank"><h5>Computación</h5></a>
+                <a href="./Pages/catalogo.html" target="_blank"><h5>Novedades</h5></a>
+            </div>
+        </div>
+        <section class="whatsapp">
+            <a href="https://web.whatsapp.com/????/es" target="_blank">
+                <img src="./assets/icons/social.png" alt="icono de whatsapp">
+                <p>Necesitas ayuda?<br><b>Contactanos</b></p>
+            </a>
+        </section>
+    </footer>
+</body>
+</html>

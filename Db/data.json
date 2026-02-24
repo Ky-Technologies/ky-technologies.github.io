@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1, 
+        "marca": "Motorola", 
+        "modelo": "G84", 
+        "precio": 400, 
+        "url": "../assets/images/motorola_imagen.png"
+    },
+    {
+        "id": 0, 
+        "marca": "Iphone", 
+        "modelo": "11", 
+        "precio": 600, 
+        "url": "../assets/images/iphone_imagen.jpg"
+    },
+    {
+        "id": 2, 
+        "marca": "Samsung", 
+        "modelo": "A15", 
+        "precio": 350, 
+        "url": "../assets/images/samsung_imagen.jpg"
+    },
+    {
+        "id": 3, 
+        "marca": "Xiaomi", 
+        "modelo": "Redmi 13C", 
+        "precio": 300, 
+        "url": "../assets/images/xiaomi_imagen.png"
+    },
+    {
+        "id": 4, 
+        "marca": "Motorola", 
+        "modelo": "A15", 
+        "precio": 310, 
+        "url": "../assets/images/motorola_imagen.png"
+    },
+    {
+        "id": 5, 
+        "marca": "Iphone", 
+        "modelo": "13", 
+        "precio": 900, 
+        "url": "../assets/images/iphone_imagen.jpg"
+    },
+    {
+        "id": 6, 
+        "marca": "Samsung", 
+        "modelo": "A35", 
+        "precio": 650, 
+        "url": "../assets/images/samsung_imagen.jpg"
+    },
+    {
+        "id": 7, 
+        "marca": "Iphone", 
+        "modelo": "12", 
+        "precio": 900, 
+        "url": "../assets/images/iphone_imagen.jpg"
+    },
+    {
+        "id": 8, 
+        "marca": "Samsung", 
+        "modelo": "A06", 
+        "precio": 210, 
+        "url": "../assets/images/samsung_imagen.jpg"
+    },
+    {
+        "id": 9, 
+        "marca": "Motorola", 
+        "modelo": "G04", 
+        "precio": 120, 
+        "url": "../assets/images/motorola_imagen.png"
+    },
+    {
+        "id": 10, 
+        "marca": "Xiaomi", 
+        "modelo": "A3", 
+        "precio": 310, 
+        "url": "../assets/images/xiaomi_imagen.png"
+    },
+    {
+        "id": 11, 
+        "marca": "Iphone", 
+        "modelo": "15", 
+        "precio": 1600, 
+        "url": "../assets/images/iphone_imagen.jpg"
+    },
+    {
+        "id": 12, 
+        "marca": "Samsung", 
+        "modelo": "S24", 
+        "precio": 1500, 
+        "url": "../assets/images/samsung_imagen.jpg"
+    },
+    {
+        "id": 13, 
+        "marca": "Xiaomi", 
+        "modelo": "Note 13", 
+        "precio": 510, 
+        "url": "../assets/images/xiaomi_imagen.png"
+    },
+    {
+        "id": 14, 
+        "marca": "Motorola", 
+        "modelo": "A35", 
+        "precio": 680, 
+        "url": "../assets/images/motorola_imagen.png"
+    },
+    {
+        "id": 15, 
+        "marca": "Iphone", 
+        "modelo": "12", 
+        "precio": 1100, 
+        "url": "../assets/images/iphone_imagen.jpg"
+    },
+    {
+        "id": 16, 
+        "marca": "Motorola", 
+        "modelo": "Edge 50", 
+        "precio": 1600, 
+        "url": "../assets/images/motorola_imagen.png"
+    },
+    {
+        "id": 17, 
+        "marca": "Samsung", 
+        "modelo": "A55", 
+        "precio": 820, 
+        "url": "../assets/images/samsung_imagen.jpg"
+    }
+]
