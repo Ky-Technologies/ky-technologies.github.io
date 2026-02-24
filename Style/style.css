@@ -211,6 +211,10 @@ ul li a {
   color: var(--clr-grey);
 }
 
+#logoTitulo {
+  align-items: center;
+}
+
 .marca {
   display: flex;
   flex-direction: row;
