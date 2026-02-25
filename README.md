@@ -1,39 +1,6 @@
 <div align="center" width="100">
 
-# Proyecto Comisión 65350
-
-</br>
-</br>
-
-<img src="./assets/images/banner_comision.jpg" alt="Imagen del logo de Coderhouse y el numero de comisión">
-
-## Capitan Phone
-
-</br>
-</br>
-
-<img src="./assets/images/banner_capitan.jpg" alt="Imagen del logo de Capitan Phone">
-
-</br>
-</br>
-
-
-
-**DESARROLLO TERMINADO**
-
-
-<img src="./assets/images/done.jpg" alt="Imagen de trabajo hecho">
-
-</div>
-
-
-</br>
-</br>
-
 Una web dedicada a la venta y distribución de celulares. En la misma podras acceder a las últimas novedades, nuestro catálogo de productos, conocer más sobre nosotros y nuestro equipo, y finalmente contactarnos por cualquier consulta.
-
-
-### IMPORTANTE !!! (POR ERROR DE CORS, el proyecto debe ser inciado en Live Server de VSC o Pages de Github)
 
 
 ### Estructura del Desarrollo
