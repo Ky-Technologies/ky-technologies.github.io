@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS -->
-    <script defer src="../Js/registro.js"></script>
-    <script defer src="../Js/sesion.js"></script>   
-    <!-- CSS -->
-    <link rel="stylesheet" href="../Style/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <!-- FONTS Y FAVICON-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../Assets/icons/android.png">
-    <!-- ICONOS BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../Assets/icons/android.png">
+  <title>Política de Privacidad | Ky Tech</title>
 </head>
+
 <body>
-    <header>
-        <div class="logo">
+<header>
+  <div class="logo">
             <img src="../assets/images/Ky Tech.png" alt="logo Ky Tech">
             <i class="bi bi-arrow-left"></i>
         </div>
@@ -30,8 +22,8 @@
             <ul class="menuPrincipalLista">
                 <li><a href="../index.html">inicio</a></li>
                 <li><a href="./catalogo.html">catalogo</a></li>
-                <li><a href="./nosotros.html">nosotros</a></li>
-                <li class="selected"><a href="./contacto.html">contacto</a></li>
+                <li class="selected"><a href="./nosotros.html">nosotros</a></li>
+                <li><a href="./contacto.html">contacto</a></li>
             </ul>
             <img src="../assets/icons/android.png" alt="icono celular">
         </div>
@@ -41,11 +33,11 @@
                 <ul>   
                     <li><a href="../index.html">inicio</a></li>
                     <li><a href="../Pages/catalogo.html">catalogo</a></li>
-                    <li><a href="../Pages/nosotros.html">nosotros</a></li>
-                    <li><a class="activo" href="../Pages/contacto.html">contacto</a></li>
+                    <li><a class="activo" href="../Pages/nosotros.html">nosotros</a></li>
+                    <li><a href="../Pages/contacto.html">contacto</a></li>
                 </ul>
             </nav>     
-        </div>
+        </div>    
         <div class="log">
             <img src="../assets/icons/sesion.png" alt="icono de inicio de sesión">
             <div class="logIn">
@@ -53,35 +45,65 @@
             </div>
             <div class="logOut"></div>
         </div>
-    </header>
-    <main>
-        <section id="formulario">
-            <form class="formularioLogin" id="loginForm" action="" method="post">
-                <h2 class="tituloLogin">Registro nuevo Usuario</h2>
-                <div class="form">            
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                </div>
-                <div class="form">
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                </div>
-                <div class="form">
-                    <input type="text" id="mail" name="mail" placeholder="Ingrese su e-mail" required>
-                </div>
-                <div class="form">            
-                    <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-                </div>
-                <div class="form">
-                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña entre 8 y 12 numeros" required>
-                </div>
-                <div class="form">
-                    <input type="password" id="repetirContrasena" name="contrasena" placeholder="Repita la contraseña" required>
-                </div>
-            </form>
-            <button class="botonLogin" type="submit">Registrarse</button>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
+</header>
+
+<main class="legal">
+  <h1>Política de Privacidad</h1>
+
+  <section>
+    <p>
+      En Ky Tech valoramos la privacidad de nuestros usuarios. La presente Política de Privacidad
+      describe cómo recopilamos, utilizamos y protegemos los datos personales proporcionados
+      a través de este sitio web.
+    </p>
+  </section>
+
+  <section>
+    <h2>Datos personales recopilados</h2>
+    <p>Podemos recopilar los siguientes datos a través de formularios de contacto:</p>
+    <ul>
+      <li>Nombre y apellido</li>
+      <li>Correo electrónico</li>
+      <li>Número de teléfono</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Finalidad del uso de datos</h2>
+    <p>Los datos se utilizan exclusivamente para:</p>
+    <ul>
+      <li>Responder consultas</li>
+      <li>Brindar información sobre productos y servicios</li>
+      <li>Mejorar la experiencia del usuario</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Protección de la información</h2>
+    <p>
+      Ky Tech adopta las medidas técnicas necesarias para proteger los datos personales y evitar
+      accesos no autorizados.
+    </p>
+  </section>
+
+  <section>
+    <h2>Derechos del usuario</h2>
+    <p>
+      El usuario puede solicitar el acceso, modificación o eliminación de sus datos personales
+      escribiendo a <strong>info@kytech.com.ar</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Legislación aplicable</h2>
+    <p>
+      Esta política se rige por la Ley Nº 25.326 de Protección de Datos Personales de la República Argentina.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer">
             <div class="redes">
                 <a href="https://www.facebook.com/profile.php?id=61588378361395" target="_blank">
                     <img src="../assets/icons/facebook.png" alt="icono de Facebook">
@@ -106,8 +128,8 @@
                 <h4>Compañia</h4>
                 <a href="../Pages/nosotros.html" target="_blank"><h5>Sobre Nosotros</h5></a>
                 <a href="../Pages/nosotros.html" target="_blank"><h5>Servicios</h5></a>
-                <a href="../Pages/privacidad.html" target="_blank"><h5>Política de Privacidad</h5></a>
-                <a href="../Pages/cookies.html" target="_blank"><h5>Política de Cookies</h5></a>
+                <a href="../Pages/construccion.html" target="_blank"><h5>Política de Privacidad</h5></a>
+                <a href="../Pages/construccion.html" target="_blank"><h5>Política de Cookies</h5></a>
             </div>
             <div class="item2">
                 <h4>Ayuda</h4>
@@ -130,8 +152,6 @@
                 <p>Necesitas ayuda?<br><b>Contactanos</b></p>
             </a>
         </section>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</footer>
 </body>
 </html>

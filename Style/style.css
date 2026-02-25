@@ -385,6 +385,35 @@ h5:hover {
   background: url(../assets/images/en_desarrollo.png) no-repeat center;
 }
 
+
+/*  *//*  *//*  *//*  *//*  *//*  *//* PAGINA LEGALES *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+.legal {
+  max-width: 900px;
+  margin: 150px auto;
+  padding: 0 30px;
+}
+
+.legal h1 {
+  color: var(--clr-grey);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.legal h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--clr-black);
+}
+
+.legal p, .legal li {
+  color: var(--clr-grey);
+  line-height: 1.6;
+}
+
+.legal ul {
+  margin-left: 20px;
+}
+
 /*  *//*  *//*  *//*  *//*  *//*  *//* PAGINA NOSOTROS *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 #tituloNosotros {
