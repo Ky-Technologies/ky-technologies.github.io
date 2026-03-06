@@ -45,6 +45,7 @@ header{
 
 .logo {
   color: var(--clr-pale);
+  padding: 5px;
 }
 
 .menuPrincipal {
@@ -208,11 +209,10 @@ ul li a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 200px 0 50px 0;
+  padding: 100px 0 20px 0;
 }
 
 .titulo {
-  padding-left: 150px;
   font-size: 3rem;
 }
 
@@ -267,10 +267,11 @@ ul li a {
 }
 
 .seccion {
-  margin: 50px 0 0 150px;
+  padding: 100px 0 0 150px;
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .seccion p {
@@ -294,6 +295,29 @@ ul li a {
   border-radius: 15px;
   height: 200px;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.botones a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botones a img {
+  padding-bottom: 10px;
+}
+
+.botones a h3{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.botones a p{
+  text-align:center;
 }
 
 .botones:hover {
