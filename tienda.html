@@ -71,6 +71,65 @@
 
     @media (max-width: 900px) { .iphones-grid { grid-template-columns: 1fr 1fr; } .tienda-intro { grid-template-columns: 1fr; } }
     @media (max-width: 580px) { .iphones-grid { grid-template-columns: 1fr; } }
+
+    /* ── PROCESO SECTION ── */
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .proceso-step {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(125,212,252,.12);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      position: relative;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+      overflow: hidden;
+    }
+    .proceso-step::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .proceso-step:hover {
+      transform: translateY(-5px);
+      border-color: rgba(26,115,200,.4);
+      box-shadow: 0 12px 36px rgba(26,115,200,.15);
+    }
+    .proceso-step:hover::before { opacity: 1; }
+    .proceso-num {
+      font-family: var(--font-head);
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .14em;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .proceso-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+      line-height: 1;
+    }
+    .proceso-body h3 {
+      font-family: var(--font-head);
+      font-size: .98rem; font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: .02em;
+    }
+    .proceso-body p {
+      color: #7aacc9;
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+    .proceso-body strong { color: #a8c8e8; }
+
+    @media (max-width: 900px) { .proceso-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .proceso-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -216,6 +275,101 @@
           </div>
           <div class="iphone-guarantee">🛡️ Garantía: 6 meses</div>
           <a href="contacto.html" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.85rem;padding:11px;">Consultar disponibilidad →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-dark);">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;margin-bottom:52px;">
+      <div class="tag" style="background:rgba(26,115,200,.2);color:#7dd4fc;border:1px solid rgba(125,212,252,.3);">Proceso de certificación</div>
+      <h2 class="section-title" style="color:var(--white);">Cada equipo pasa por <em style="color:#7dd4fc;font-style:normal;">9 etapas</em> antes de la entrega</h2>
+      <p style="color:#a8c8e8;max-width:600px;margin:0 auto;font-size:1rem;line-height:1.7;">No comercializamos dispositivos sin verificación. Este es el proceso completo que garantiza que cada equipo llegue en condiciones óptimas.</p>
+    </div>
+
+    <div class="proceso-grid fade-in">
+
+      <div class="proceso-step">
+        <div class="proceso-num">01</div>
+        <div class="proceso-icon">🔍</div>
+        <div class="proceso-body">
+          <h3>Chequear el IMEI y el estado de bloqueo</h3>
+          <p>Verificamos que el equipo no esté reportado como robado y que no tenga bloqueo de iCloud (Activation Lock).</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">02</div>
+        <div class="proceso-icon">🛠️</div>
+        <div class="proceso-body">
+          <h3>Realizar un diagnóstico funcional completo</h3>
+          <p>Probamos pantalla (touch y píxeles), batería (capacidad y ciclos), cámaras, micrófono, parlantes, sensores, Face ID / Touch ID, WiFi, Bluetooth y señal celular.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">03</div>
+        <div class="proceso-icon">📋</div>
+        <div class="proceso-body">
+          <h3>Evaluar el estado físico del equipo</h3>
+          <p>Inspeccionamos carcasa, pantalla (rayones o golpes), botones, puerto Lightning y posibles daños por contacto con líquidos.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">04</div>
+        <div class="proceso-icon">🔧</div>
+        <div class="proceso-body">
+          <h3>Reemplazar componentes defectuosos</h3>
+          <p>Sustituimos batería, pantalla u otros módulos que no cumplan con nuestros estándares de calidad.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">05</div>
+        <div class="proceso-icon">💿</div>
+        <div class="proceso-body">
+          <h3>Restaurar el software de fábrica</h3>
+          <p>Formateamos el equipo e instalamos iOS limpio utilizando herramientas oficiales.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">06</div>
+        <div class="proceso-icon">✨</div>
+        <div class="proceso-body">
+          <h3>Realizar limpieza interna y externa</h3>
+          <p>Eliminamos polvo, suciedad y residuos para asegurar correcto funcionamiento y buena presentación.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">07</div>
+        <div class="proceso-icon">✅</div>
+        <div class="proceso-body">
+          <h3>Ejecutar pruebas finales de calidad</h3>
+          <p>Volvemos a testear todas las funciones para garantizar que el equipo esté en óptimas condiciones.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">08</div>
+        <div class="proceso-icon">🏷️</div>
+        <div class="proceso-body">
+          <h3>Clasificar el estado estético</h3>
+          <p>Asignamos una categoría (A, B o C) según el nivel de desgaste visual.</p>
+        </div>
+      </div>
+
+      <div class="proceso-step">
+        <div class="proceso-num">09</div>
+        <div class="proceso-icon">📦</div>
+        <div class="proceso-body">
+          <h3>Preparar el equipo para la venta</h3>
+          <p>Lo embalamos, incluimos accesorios y definimos la garantía correspondiente.</p>
         </div>
       </div>
 
