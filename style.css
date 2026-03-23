@@ -168,23 +168,89 @@ nav {
 /* logo in nav no longer shown - logo is in full-width banner */
 .logo-img { display: none; }
 
-/* ── WHATSAPP FLOTANTE ── */
-.wa-float {
+/* ── WHATSAPP FLOTANTE CON MENÚ ── */
+.wa-wrapper {
   position: fixed;
   bottom: 28px; right: 28px;
   z-index: 999;
-  display: flex; align-items: center; gap: 12px;
+  display: flex; flex-direction: column; align-items: flex-end;
+  gap: 12px;
+}
+
+/* Menú desplegable */
+.wa-menu {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.18);
+  width: 300px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform .25s ease, opacity .25s ease;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.wa-menu.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+.wa-menu-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px;
   background: #25d366;
   color: #fff;
-  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: .88rem; font-weight: 700;
+}
+.wa-close {
+  background: none; border: none; color: #fff;
+  font-size: 1rem; cursor: pointer; line-height: 1;
+  opacity: .8; transition: opacity .2s;
+  padding: 0;
+}
+.wa-close:hover { opacity: 1; }
+
+.wa-option {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 16px;
+  text-decoration: none; color: #1a3a5c;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background .18s;
+  font-family: var(--font-body);
+}
+.wa-option:last-child { border-bottom: none; }
+.wa-option:hover { background: #f0faf4; }
+.wa-opt-icon {
+  font-size: 1.4rem; flex-shrink: 0;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: #f0faf4; border-radius: 10px;
+}
+.wa-option strong {
+  display: block; font-size: .86rem; font-weight: 700;
+  color: #0d2a4a; line-height: 1.3;
+}
+.wa-option small {
+  display: block; font-size: .76rem; color: #6a9bbf;
+  margin-top: 2px;
+}
+
+/* Botón principal */
+.wa-float {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25d366;
+  color: #fff;
+  border: none;
   padding: 12px 20px 12px 14px;
   border-radius: 50px;
   box-shadow: 0 4px 20px rgba(37,211,102,.45);
   font-family: var(--font-body);
-  font-size: .85rem;
-  font-weight: 600;
+  cursor: pointer;
   transition: transform .2s, box-shadow .2s;
-  max-width: 260px;
 }
 .wa-float:hover {
   transform: translateY(-3px);
@@ -196,7 +262,6 @@ nav {
   display: flex; align-items: center; justify-content: center;
 }
 .wa-float-icon svg { width: 36px; height: 36px; fill: #fff; }
-.wa-float-text {}
 .wa-float-text .wa-top {
   font-size: .75rem; font-weight: 400;
   opacity: .9; display: block; line-height: 1.2;

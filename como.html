@@ -3,59 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Packs – Kytech</title>
+  <title>Cómo trabajamos – Kytech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .packs-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 40px; }
-    .pack-card {
+    /* PASOS */
+    .steps-list { display: flex; flex-direction: column; gap: 0; margin-top: 46px; position: relative; }
+    .steps-list::before {
+      content: ''; position: absolute;
+      left: 23px; top: 24px; bottom: 24px; width: 3px;
+      background: linear-gradient(to bottom, var(--accent), rgba(181,210,0,.15));
+    }
+    .step-row { display: flex; align-items: flex-start; gap: 26px; padding: 24px 0; }
+    .step-num {
+      width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+      background: var(--bg-dark); border: 3px solid var(--accent);
+      color: #7dd4fc; z-index: 1;
+    }
+    .step-content {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 34px;
-      display: flex; flex-direction: column;
+      border-radius: var(--radius-lg); padding: 22px 26px; flex: 1;
       box-shadow: var(--shadow);
-      transition: transform .25s, box-shadow .25s;
-      position: relative; overflow: hidden;
+      transition: border-left-color .25s, box-shadow .25s;
+      border-left: 3px solid transparent;
     }
-    .pack-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-    .pack-card.featured {
-      border-top: 4px solid var(--accent);
-      border-color: var(--accent);
-    }
-    .pack-card.dark-featured {
-      background: var(--bg-dark);
-      border-top: 4px solid var(--accent);
-    }
-    .pack-badge {
-      position: absolute; top: 20px; right: 20px;
-      background: var(--accent); color: var(--dark);
-      font-size: .7rem; font-weight: 700;
-      padding: 4px 12px; border-radius: 4px;
-      letter-spacing: .08em; text-transform: uppercase;
-    }
-    .pack-num {
-      font-family: var(--font-head); font-size: .78rem; font-weight: 700;
-      letter-spacing: .15em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 10px;
-    }
-    .dark-featured .pack-num { color: #888; }
-    .pack-name { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; color: var(--dark); letter-spacing: .03em; }
-    .dark-featured .pack-name { color: var(--white); }
-    .pack-tagline { color: var(--muted); font-size: .88rem; margin-bottom: 22px; }
-    .dark-featured .pack-tagline { color: #a8c8e8; }
-    .pack-divider { height: 1px; background: var(--border); margin-bottom: 18px; }
-    .dark-featured .pack-divider { background: rgba(125,212,252,.12); }
-    .pack-includes { font-size: .74rem; font-weight: 700; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
-    .dark-featured .pack-includes { color: #7aacc9; }
-    .pack-list { list-style: none; display: flex; flex-direction: column; gap: 9px; flex: 1; }
-    .pack-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: var(--text); }
-    .dark-featured .pack-list li { color: #c0daf0; }
-    .pack-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-    .pack-cta { margin-top: 26px; }
-    .pack-cta .btn { width: 100%; justify-content: center; letter-spacing: .04em; }
+    .step-row:hover .step-content { border-left-color: var(--accent); box-shadow: var(--shadow-lg); }
+    .step-content h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; font-family: var(--font-head); letter-spacing: .03em; }
+    .step-content p { color: var(--muted); font-size: .9rem; line-height: 1.65; }
 
-    @media (max-width: 800px) { .packs-grid { grid-template-columns: 1fr; } }
+    /* ANTES / DESPUÉS */
+    .ad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+    .ad-card { border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow); }
+    .ad-card.antes { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid #ccc; }
+    .ad-card.despues { background: var(--bg-dark); border-top: 3px solid var(--accent); }
+    .ad-label { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+    .antes .ad-label { color: var(--muted); }
+    .despues .ad-label { color: var(--accent); }
+    .ad-items { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .ad-items li { display: flex; align-items: center; gap: 10px; font-size: .9rem; }
+    .antes .ad-items li { color: var(--muted); }
+    .despues .ad-items li { color: #c0daf0; }
+    .antes .ad-items li::before { content: '✕'; color: #bbb; font-weight: 700; }
+    .despues .ad-items li::before { content: '✓'; color: var(--accent); font-weight: 700; }
+
+    /* TESTIMONIOS */
+    .testimonios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 40px; }
+    .testimonio-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 26px;
+      box-shadow: var(--shadow);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .testimonio-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .stars { color: var(--accent); margin-bottom: 12px; font-size: 1rem; letter-spacing: 2px; }
+    .testimonio-text { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .testimonio-author { display: flex; align-items: center; gap: 12px; }
+    .autor-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--bg-dark); border: 2px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .85rem; color: #7dd4fc; flex-shrink: 0;
+    }
+    .autor-name { font-weight: 600; font-size: .88rem; color: var(--dark); }
+    .autor-biz { color: var(--muted); font-size: .78rem; }
+
+    /* QUIÉNES SOMOS */
+    .quienes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .quienes-text p { color: var(--muted); font-size: .95rem; line-height: 1.8; margin-bottom: 14px; }
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 26px; }
+    .value-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 14px 16px;
+      border-left: 3px solid var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .value-icon { font-size: 1.2rem; margin-bottom: 6px; }
+    .value-title { font-weight: 600; font-size: .88rem; color: var(--dark); }
+    .quienes-visual {
+      background: var(--bg-dark); border-radius: var(--radius-lg); padding: 42px;
+      border-top: 4px solid var(--accent); box-shadow: var(--shadow-lg);
+    }
+    .quienes-visual h3 { font-size: 1.5rem; font-weight: 700; margin: 16px 0 12px; color: var(--white); letter-spacing: .03em; }
+    .quienes-visual p { color: #a8c8e8; font-size: .93rem; line-height: 1.75; }
+
+    @media (max-width: 900px) {
+      .ad-grid, .quienes-grid { grid-template-columns: 1fr; }
+      .testimonios-grid { grid-template-columns: 1fr 1fr; }
+      .steps-list::before { display: none; }
+    }
+    @media (max-width: 580px) {
+      .testimonios-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -72,9 +115,9 @@
         <li>  <a href="index.html" class="logo-img" style="margin-bottom:8px;"><img src="Logo_KyTech.jpg" alt="Kytech" style="height:32px;filter:brightness(0) invert(1);"></a>
   <a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="packs.html" class="active">Packs</a></li>
+        <li><a href="packs.html">Packs</a></li>
         <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="como.html">Cómo trabajamos</a></li>
+        <li><a href="como.html" class="active">Cómo trabajamos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
       <div class="nav-cta">
@@ -96,76 +139,119 @@
 
 <div class="page-header">
   <div class="container">
-    <div class="tag">Packs de servicios</div>
-    <h1>Seleccione el pack <em>adecuado a su etapa</em></h1>
-    <p>Soluciones preconfiguradas que combinan los servicios de cada nivel. Cada pack incluye implementación completa y soporte inicial.</p>
+    <div class="tag">Metodología de trabajo</div>
+    <h1>Proceso estructurado, <em>resultados medibles</em></h1>
+    <p>Cada proyecto sigue un proceso de cuatro etapas que garantiza la entrega completa, sin costo adicional y con acompañamiento durante la implementación.</p>
   </div>
 </div>
 
+<!-- PASOS -->
 <section class="section">
   <div class="container">
-    <div class="packs-grid">
-
-      <div class="pack-card fade-in">
-        <div class="pack-num">Pack 01</div>
-        <div class="pack-name">Inicio Digital</div>
-        <div class="pack-tagline">Infraestructura base para iniciar operaciones digitales</div>
-        <div class="pack-divider"></div>
-        <div class="pack-includes">Incluye</div>
-        <ul class="pack-list">
-          <li>Registro de dominio propio</li>
-          <li>Correo corporativo (Google Workspace)</li>
-          <li>WhatsApp Business configurado</li>
-        </ul>
-        <div class="pack-cta"><a href="contacto.html" class="btn btn-outline">Solicitar pack</a></div>
+    <div class="tag">Etapas</div>
+    <h2 class="section-title">Proceso de implementación</h2>
+    <div class="steps-list fade-in">
+      <div class="step-row">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Diagnóstico — Sin costo</h3>
+          <p>Análisis de la situación digital actual de la empresa. Identificación de brechas, oportunidades y recursos existentes. Se realiza por WhatsApp, videollamada o de forma presencial, sin costo y sin compromiso de contratación.</p>
+        </div>
       </div>
-
-      <div class="pack-card featured fade-in">
-        <div class="pack-badge">Más solicitado</div>
-        <div class="pack-num">Pack 02</div>
-        <div class="pack-name">Negocio Online</div>
-        <div class="pack-tagline">Presencia digital completa para comenzar a generar ventas</div>
-        <div class="pack-divider"></div>
-        <div class="pack-includes">Incluye</div>
-        <ul class="pack-list">
-          <li>Todo lo del Pack Inicio Digital</li>
-          <li>Sitio web profesional</li>
-          <li>Redes sociales configuradas</li>
-          <li>Identidad de marca básica (logotipo y paleta)</li>
-        </ul>
-        <div class="pack-cta"><a href="contacto.html" class="btn btn-primary">Solicitar pack</a></div>
+      <div class="step-row">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Propuesta personalizada</h3>
+          <p>Con base en el diagnóstico, se elabora una propuesta detallada que especifica alcance, entregables, plazos y costos. Sin cargos ocultos ni módulos adicionales no acordados.</p>
+        </div>
       </div>
-
-      <div class="pack-card fade-in">
-        <div class="pack-num">Pack 03</div>
-        <div class="pack-name">Crecimiento Digital</div>
-        <div class="pack-tagline">Activación de canales para adquisición sistemática de clientes</div>
-        <div class="pack-divider"></div>
-        <div class="pack-includes">Incluye</div>
-        <ul class="pack-list">
-          <li>Todo lo del Pack Negocio Online</li>
-          <li>SEO básico y posicionamiento local</li>
-          <li>Publicidad digital inicial (Meta Ads / Google Ads)</li>
-          <li>Automatización básica de formularios</li>
-        </ul>
-        <div class="pack-cta"><a href="contacto.html" class="btn btn-outline">Solicitar pack</a></div>
+      <div class="step-row">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Implementación completa</h3>
+          <p>Ejecución integral de todos los entregables acordados. El cliente no necesita intervenir en aspectos técnicos. Kytech gestiona configuraciones, diseño, desarrollo y activación de cada herramienta.</p>
+        </div>
       </div>
-
-      <div class="pack-card dark-featured fade-in">
-        <div class="pack-num" style="color:#777;">Pack 04</div>
-        <div class="pack-name">Emprendedor Completo</div>
-        <div class="pack-tagline">Solución integral: presencia digital y equipamiento profesional</div>
-        <div class="pack-divider"></div>
-        <div class="pack-includes">Incluye</div>
-        <ul class="pack-list">
-          <li>Pack Negocio Online completo</li>
-          <li>iPhone verificado y configurado</li>
-          <li>WhatsApp Business configurado en el equipo</li>
-          <li>Redes sociales operativas desde el primer día</li>
-        </ul>
-        <div class="pack-cta"><a href="contacto.html" class="btn btn-primary">Solicitar pack</a></div>
+      <div class="step-row">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Acompañamiento post-entrega</h3>
+          <p>Período de soporte inicial una vez finalizada la implementación. Se capacita al cliente en el uso de las herramientas y se resuelven consultas operativas del primer período de uso.</p>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- ANTES Y DESPUÉS -->
+<section class="section" style="background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="tag">Resultados</div>
+    <h2 class="section-title">Situación antes y después</h2>
+    <div class="ad-grid fade-in">
+      <div class="ad-card antes">
+        <div class="ad-label">Situación inicial típica</div>
+        <ul class="ad-items">
+          <li>Ausencia de sitio web</li>
+          <li>Perfiles en redes sin identidad visual ni estrategia</li>
+          <li>WhatsApp personal utilizado para el negocio</li>
+          <li>Sin canales estructurados de captación de clientes</li>
+          <li>Oportunidades comerciales sin convertir</li>
+        </ul>
+      </div>
+      <div class="ad-card despues">
+        <div class="ad-label">Situación tras la implementación</div>
+        <ul class="ad-items">
+          <li>Sitio web profesional activo y optimizado</li>
+          <li>Redes sociales con identidad visual y configuración completa</li>
+          <li>WhatsApp Business con respuestas automáticas</li>
+          <li>Sistema de captación y conversión configurado</li>
+          <li>Infraestructura digital lista para escalar</li>
+        </ul>
+      </div>
+    </div>
+    <div class="testimonios-grid" style="margin-top:48px;">
+      <div class="testimonio-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Tenía el proyecto en mente pero no sabía cómo llevarlo a lo digital. Kytech implementó todo en menos de una semana."</p>
+        <div class="testimonio-author"><div class="autor-avatar">MR</div><div><div class="autor-name">Marcela R.</div><div class="autor-biz">Comercio de indumentaria</div></div></div>
+      </div>
+      <div class="testimonio-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Me entregaron el equipo con WhatsApp Business activo, redes configuradas y respuestas automáticas. Operativo desde el primer día."</p>
+        <div class="testimonio-author"><div class="autor-avatar">JL</div><div><div class="autor-name">Javier L.</div><div class="autor-biz">Prestación de servicios</div></div></div>
+      </div>
+      <div class="testimonio-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"El resultado superó las expectativas. Kytech gestionó cada aspecto técnico sin que yo necesitara intervenir."</p>
+        <div class="testimonio-author"><div class="autor-avatar">SV</div><div><div class="autor-name">Sofía V.</div><div class="autor-biz">Consultoría en nutrición</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section class="section">
+  <div class="container">
+    <div class="quienes-grid fade-in">
+      <div class="quienes-text">
+        <div class="tag">Sobre Kytech</div>
+        <h2 class="section-title">Un equipo especializado en digitalización empresarial</h2>
+        <p>Kytech es una empresa orientada a la implementación y profesionalización digital de emprendimientos y pequeñas empresas.</p>
+        <p>Nos especializamos en simplificar la tecnología para que el cliente pueda concentrarse en la gestión y el crecimiento de su negocio.</p>
+        <p>Nuestro diferencial es la implementación integral: no entregamos instrucciones, entregamos resultados operativos.</p>
+        <div class="values-grid">
+          <div class="value-item"><div class="value-icon">🎯</div><div class="value-title">Orientados a resultados</div></div>
+          <div class="value-item"><div class="value-icon">💬</div><div class="value-title">Comunicación transparente</div></div>
+          <div class="value-item"><div class="value-icon">⚡</div><div class="value-title">Implementación ágil</div></div>
+          <div class="value-item"><div class="value-icon">🤝</div><div class="value-title">Soporte continuo</div></div>
+        </div>
+      </div>
+      <div class="quienes-visual">
+        <div style="font-size:3.5rem;">👥</div>
+        <h3>Su negocio,<br>nuestra responsabilidad</h3>
+        <p>Creemos que cualquier empresa puede tener una presencia digital profesional. El acceso a herramientas tecnológicas no debe ser un obstáculo para el crecimiento.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -173,11 +259,11 @@
 <section class="section-sm" style="background:var(--surface2);border-top:1px solid var(--border);">
   <div class="container">
     <div class="cta-banner fade-in">
-      <h2>¿Necesita asesoramiento para seleccionar el pack?</h2>
-      <p>Realizamos un diagnóstico gratuito y recomendamos la solución más adecuada a su situación actual y objetivos.</p>
+      <h2>¿Listo para iniciar el proceso?</h2>
+      <p>El diagnóstico inicial es gratuito. Contáctenos y le presentamos una propuesta en 24 horas.</p>
       <div class="cta-btns">
-        <a href="contacto.html" class="btn btn-primary">Solicitar asesoramiento →</a>
-        <a href="servicios.html" class="btn btn-outline" style="color:#a8c8e8;border-color:rgba(125,212,252,.3);">Ver todos los servicios</a>
+        <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico gratuito →</a>
+        <a href="packs.html" class="btn btn-outline" style="color:#a8c8e8;border-color:rgba(125,212,252,.3);">Ver packs disponibles</a>
       </div>
     </div>
   </div>
